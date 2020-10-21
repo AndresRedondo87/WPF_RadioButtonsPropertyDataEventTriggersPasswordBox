@@ -23,7 +23,8 @@
                 </WrapPanel>
             </RadioButton>
 
-            <RadioButton Name="rbMaybe" Margin="5" Checked="Vielleicht_RadioButton_Checked"  IsChecked="True">
+            <RadioButton Name="rbMaybe" Margin="5" Checked="Vielleicht_RadioButton_Checked"> 
+                <!-- unter RadioButton kann man nochIsChecked="True" zum Defaultwert zu setzen, aber es wurde hier auch die Messagebox ganz am anfang kommen. DOOF-->
                 <WrapPanel>
                     <!--<Rectangle Fill="Orange" Width="50" Height="50"/>-->
                     <!--ONLINE PIC HINZUFÜGEN: einfach den Pfad dahin in Source eingeben-->
