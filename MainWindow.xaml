@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_RadioButtonsPropertyDataEventTriggersPasswordBox"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -148,7 +148,21 @@
                     <TextBlock Foreground="black" Margin="5,0,0,0" VerticalAlignment="Center"><Run Text="IMPOSTOR"/></TextBlock>
                 </WrapPanel>
             </RadioButton>
+
+
+            <Label>Benutzername:</Label>
+            <TextBox Name="tbUsername" MaxLength="16" Width="100" HorizontalAlignment="Left" Margin="10,0,0,0"></TextBox>
+            <Label>Passwort:</Label>
+            <PasswordBox Name="pbPassword" Width="100" HorizontalAlignment="Left" Margin="10,0,0,10" >
+                <!--um die Punkte mit * oder was anderes zu ersetzen: PasswordChar="~"-->
+                <!--um die Text Eingabe zu lang zu vermeiden: MaxLength="16", ist aber normalerweise meht in nutzername als das hier...-->
+
+            </PasswordBox>
+            <Button Width="100" HorizontalAlignment="Left" Margin="10,0,0,0" Content="Einloggen" Click="Button_Click"></Button>
+
+
         </StackPanel>
+
 
     </Grid>
 </Window>

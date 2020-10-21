@@ -43,6 +43,18 @@ namespace WPF_RadioButtonsPropertyDataEventTriggersPasswordBox
         {
             MessageBox.Show("U SUS...");
         }
-        
+
+        //PASSWORDBOX
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(tbUsername.Text != "" && tbUsername != null)
+            {
+                MessageBox.Show($"Willkommen {tbUsername.Text}");
+            }
+            else
+            {
+                MessageBox.Show($"Benutzername und Passwort eingeben!");
+            }
+        }
     }
 }
