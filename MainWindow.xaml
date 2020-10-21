@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
             <Label FontWeight="Bold" FontSize="20" Margin="10">Radio Buttons: Magst du mich?</Label>
             <RadioButton Margin="5" Checked="Ja_RadioButton_Checked">
                 <WrapPanel>
@@ -34,6 +38,45 @@
             </RadioButton>
 
             <RadioButton Name="rbImpostor" Margin="5" Checked="Impostor_RadioButton_Checked" >
+                <WrapPanel>
+                    <!--LOCAL PIC HINZUFÜGEN: IM PROJEKT zumindest!! ein Ordner mit den bild hinzufügen, dann rechte maus auf das bild und komplette Pfad kopieren...
+                    aber eigentlich sollte man KEINE ABSOLUTEN PFAD BENUTZEN-->
+                    <!--<Image Source="C:\Users\Andres Redondo\source\repos\WPF_RadioButtonsPropertyDataEventTriggersPasswordBox\Bild_Ressources\imposters-syndrom.jpg"
+                           Width="50" Height="50" Stretch="Fill"  />-->
+                    <Image Source=".\Bild_Ressources\imposters-syndrom.jpg"
+                           Width="50" Height="50" Stretch="Fill"  />
+                    <TextBlock Foreground="black" Margin="5,0,0,0" VerticalAlignment="Center"><Run Text="IMPOSTOR"/></TextBlock>
+                </WrapPanel>
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <Label FontWeight="Bold" FontSize="20" Margin="10">Radio Buttons: Magst du mich?2</Label>
+            <RadioButton Margin="5" Checked="Ja_RadioButton_Checked">
+                <WrapPanel>
+                    <Rectangle Fill="Green" Width="50" Height="50"/>
+                    <TextBlock Foreground="Green" Margin="5,0,0,0" VerticalAlignment="Center">JA</TextBlock>
+                    <!--Unterschiedliche Margins: Links,oben,rechts,unten. So zu sagen UhrzeigerSinn-->
+                </WrapPanel>
+            </RadioButton>
+            <RadioButton Margin="5" Checked="Nein_RadioButton_Checked">
+                <WrapPanel>
+                    <Rectangle Fill="red" Width="50" Height="50"/>
+                    <TextBlock Foreground="red" Margin="5,0,0,0" VerticalAlignment="Center">NEIN</TextBlock>
+                </WrapPanel>
+            </RadioButton>
+
+            <RadioButton Name="rbMaybe2" Margin="5" Checked="Vielleicht_RadioButton_Checked">
+                <!-- unter RadioButton kann man nochIsChecked="True" zum Defaultwert zu setzen, aber es wurde hier auch die Messagebox ganz am anfang kommen. DOOF-->
+                <WrapPanel>
+                    <!--<Rectangle Fill="Orange" Width="50" Height="50"/>-->
+                    <!--ONLINE PIC HINZUFÜGEN: einfach den Pfad dahin in Source eingeben-->
+                    <Image Source="https://cdn.pixabay.com/photo/2016/09/03/21/11/smiley-1642726_960_720.jpg" Width="50" Height="50" Stretch="Fill"  />
+                    <TextBlock Foreground="Orange" Margin="5,0,0,0" VerticalAlignment="Center"><Run Text="VIELLEICHT"/></TextBlock>
+                </WrapPanel>
+            </RadioButton>
+
+            <RadioButton Name="rbImpostor2" Margin="5" Checked="Impostor_RadioButton_Checked" >
                 <WrapPanel>
                     <!--LOCAL PIC HINZUFÜGEN: IM PROJEKT zumindest!! ein Ordner mit den bild hinzufügen, dann rechte maus auf das bild und komplette Pfad kopieren...
                     aber eigentlich sollte man KEINE ABSOLUTEN PFAD BENUTZEN-->
